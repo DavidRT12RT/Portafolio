@@ -1,8 +1,14 @@
-/* Portafolio component styles*/
+
+/* Proyect modal component styles*/
+html,body{
+    margin:0px;
+    padding:0px;
+}
 
 .titulo{
     font-family: 'Playfair Display', serif;
     margin:0px;
+
 }
 
 .descripcion{
@@ -10,75 +16,60 @@
     margin:0px;
 }
 
-body{
-    display: grid;
-    align-items: center;
-    justify-content: center;
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    /* Le ponemos un max-width
+    para que no anada las barras extra de scroll*/
+    /* El border le anadira a las medidas que ya tiene 
+    asi que si le decimos que este al 100vw de la pantalla
+    y le agregamos un poco mas es obvio que anadira scroll*/
 }
 
-.contenedorPrincipal{
-    width: 800px;
-    height: 1200px;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #181818;
-}
-
-@media(min-width:100px) and (max-width:1000px) {
-    .contenedorPrincipal{
-        width: 100vw;
-        height: 100vh;
-        margin:0px;
-    }
-}
-
-.contenedorPrincipal .previewFade{
-    background:linear-gradient(
-        to bottom,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,1) 100%
-    ),
-    url("../assets/NeverGearWallpaper.jpg");
-    width:100%;
-    height: 400px;
-    background-size: cover;
-    /*background-size:100%; Ajusta el tamano de el fondo a el tamao de la imagen original*/
-
-    /* 
-        The background-size CSS property sets the size 
-        of the element's background image. 
-        The image can be left to its natural size, 
-        stretched, or constrained to fit the available 
-        space.
-    */
-
-    background-position: center;
-    background-repeat: no-repeat;
-
+/* CUBE 3D ROTATION */
+.container3D{
     position:relative;
+    left:0px;
     top:0px;
-    left:0px
+    
+    width: 100%;
+    height: 100%;
+
 }
 
-.contenedorPrincipal .previewFadeInfo{
+.container3D .information{
     position:absolute;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%); 
-
+    color:#fff;
+    z-index: 1;
+    text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 
-.detailsPreviewModel{
-    width: 100%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
-    display: grid;
-    grid-template-columns: minmax(0,2fr) minmax(0,1fr);
+.container3D .information .titulo{
+    font-size: 40px;
 }
 
 
+.proyectsContainer {
+    background-image: url("../assets/bg.gif");
+    color:white;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+
+}
 
