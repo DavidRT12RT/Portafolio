@@ -1,0 +1,80 @@
+/* Boot Loader component styles*/
+* {
+    box-sizing: border-box; 
+}
+
+@font-face {
+    font-family: "DejaVuSansMono";
+    src: url("../assets/fonts/DejaVuSansMono/DejaVuSansMono.ttf") format("truetype");
+    font-weight:400;
+}
+
+@font-face {
+    font-family: "DejaVuSansMono";
+    src: url("../assets/fonts/DejaVuSansMono/DejaVuSansMono-Bold.ttf") format("truetype");
+    font-weight:700;
+}
+
+body,html{
+    margin:0px;
+    padding: 0px;
+}
+
+.bootLoaderContainer{
+    background-color:#000000;
+    color:#fff;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    padding: 40px;
+}
+
+.bootLoaderContainer p {
+    font-family: "DejaVuSansMono";
+    font-weight: 400;
+    font-size: 13px;
+    margin:0px;
+}
+
+.demonsContainer{
+    /*
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 40%;
+    justify-content: space-between;
+    gap:5px;
+    margin-top: 20px;
+    */
+
+
+    width: 70%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    justify-items:start;
+    gap:1px;
+    margin-top: 20px;
+}
+
+
+
+.demonsContainer div:has(.statusNotification){
+    grid-column: 1/-1;
+}
+
+.nameDemon{
+}
+
+.statusDemon{
+}
+
+.demonLoaded{
+    color:#00c400;
+}
+
+@media(min-width:100px) and (max-width:1000px){
+    .demonsContainer{
+        width: 100%;
+    }
+}

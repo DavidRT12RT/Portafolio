@@ -7,12 +7,14 @@ html,body{
 
 .titulo{
     font-family: 'Playfair Display', serif;
+    font-weight: 700;
     margin:0px;
 
 }
 
 .descripcion{
     font-family: 'Playfair Display', serif;
+    font-weight: 400;
     margin:0px;
 }
 
