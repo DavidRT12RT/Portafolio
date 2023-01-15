@@ -1,24 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import FadeIn from "react-fade-in";
 
-import "../css/BootLoader.css";
+import "../assets/css/BootLoader.css";
 
-export const BootLoader = () => {
-    const [isBootLoaderVisible, setIsBootLoaderVisible] = useState(true);
+export const BootLoader = ({onBootLoaderFinish}) => {
 
-    const handleChangeDissapear = () => {
-        //bootLoaderRef.current.classList.add("d-none")
-        setIsBootLoaderVisible(false);
-    }
-
-    if (!isBootLoaderVisible) return null;
-    else return (
+    return (
         <div className="bootLoaderContainer">
             <FadeIn 
                 className="demonsContainer" 
                 transitionDuration={3} 
                 delay={50} 
-                onComplete={handleChangeDissapear}
+                onComplete={onBootLoaderFinish}
             >
                 <p className="statusNotification">Welcome to <span className="text-primary">David Arcos OS</span></p>
                 <p className="statusNotification">Run levels set to 3 by default</p>

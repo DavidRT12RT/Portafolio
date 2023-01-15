@@ -1,0 +1,34 @@
+/* Hero component styles */
+.container3D{
+    position:relative;
+    left:0px;
+    top:0px;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.container3D .information{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+
+    color:#fff;
+    z-index: 1;
+    text-align: center;
+
+    display: grid;
+    align-content: center;    
+
+    padding:20px;
+
+}
+
+.container3D .information .titulo{
+    font-size: 40px;
+}
+
+.container3D .information .descripcion{
+    font-size: 30px;
+}
+

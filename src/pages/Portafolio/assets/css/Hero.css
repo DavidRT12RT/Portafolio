@@ -1,0 +1,87 @@
+/* Hero component styles*/
+.heroContainer {
+    padding:100px 40px 0px;
+
+    display: grid;
+    grid-template-columns: minmax(200px,2fr) minmax(100px,2fr);
+    background-color: #fff;
+    color:#fff;
+    grid-template-rows: min-content;
+    align-items: center; 
+    gap: 10px;
+
+    color:#000000;    
+
+}
+
+.contentLeft .titulo {
+    font-size: 100px;
+}
+
+.contentRight .quote{
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position-y: 40%;
+    background-repeat: no-repeat;
+}
+
+.contentDown{
+    align-self: start; 
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.contentDown .btns{
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.art3DContainer{
+    grid-column: 1/-1;
+    /* grid-row-start: 10; */
+    grid-row-end:auto;
+
+    height: 100%;
+
+    position: relative;
+}
+
+.information{
+    position:absolute;
+
+    top: 0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
+
+
+@media(min-width:100px) and (max-width:1000px){
+    .heroContainer{
+        width: 90%;
+        padding:100px 20px 0px;
+        align-items: start; 
+        grid-template-columns: 1fr;
+    }
+
+    .contentLeft .titulo{
+        font-size: 60px;
+    }
+
+    .contentDown{
+        grid-template-columns: 1fr;
+    }
+
+
+}

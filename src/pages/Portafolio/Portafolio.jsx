@@ -1,19 +1,29 @@
+import { useState } from "react";
 
 //Component's
 import { BootLoader } from "./components/BootLoader";
-import { CubeRotation } from "./components/CubeRotation";
-import { Proyects } from "./components/Proyects";
+import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
+import { Knowledge } from "./components/Knowledge";
 
 //Style
-import "./css/style.css";
+import "./assets/css/Portafolio.css"; 
 
 export const Portafolio = () => {
 
+    const [isBootLoaderVisible, setIsBootLoaderVisible] = useState(true);
+
+    const onBootLoaderFinish = () => {
+        //bootLoaderRef.current.classList.add("d-none")
+        setIsBootLoaderVisible(false);
+    }
+
+    //if(isBootLoaderVisible) return <BootLoader onBootLoaderFinish={onBootLoaderFinish}/>
     return (
         <div className="mainContainer">
-            <BootLoader/>
-            <CubeRotation/>
-            <Proyects/>
+            <Navbar/>
+            <Hero/>
+            <Knowledge/>
         </div>
     );
 }

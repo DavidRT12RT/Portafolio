@@ -1,0 +1,35 @@
+/* Knowledge component*/
+.knowledgeContainer{
+
+}
+
+.bar{
+    width: 100%;
+    height: 100px;
+
+    background-color: #000;
+    border:1px solid rgb(253, 56, 62);
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bar .titulo{
+    font-size: 100px;
+    -webkit-text-fill-color: transparent;
+    /*-webkit-text-stroke: 1px rgb(253, 56, 62);*/
+    -webkit-text-stroke: 1px rgb(253, 56, 62);
+    animation:scrolling 4.19s linear infinite;
+}
+
+@keyframes scrolling {
+    from{
+        transform:translateX(100%);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}

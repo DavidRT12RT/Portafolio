@@ -6,11 +6,14 @@ import { useRef } from "react";
 import {
     OrbitControls
 } from "three/examples/jsm/controls/OrbitControls";
+
+//Style CSS
+import "../css/Hero.css";
+
 extend({OrbitControls});
 
 
 const Orbit = () => {
-
     const { camera,gl } = useThree();
     return (
         <orbitControls args={[camera,gl.domElement]}/>
@@ -33,22 +36,20 @@ const Box = (props) => {
     );
 }
 
-
-
-export const CubeRotation = () => {
+export const Hero = () => {
     return (
-        <div className="container3D">
+        <section className="container3D">
             <FadeIn className="information" transitionDuration={800}>
-                <h1 className="titulo">Never gear</h1>
-                <p className="descripcion">El NerveGear (ナーヴギア Nāvugia) es una interfaz hardware utilizada en los VRMMORPG's para que los jugadores puedan tener una inmersión total en el juego.</p>
+                <h1 className="titulo">FULL STACK DEVELOPER</h1>
+                <p className="descripcion">DAVID ARCOS</p>
             </FadeIn>
             <Canvas
                 style={{background:"black"}}
-                camera={{position:[3,3,3]}}
+                camera={{position:[0,0,0]}}
             >
-                <Box position={[0,0,0]}/>
+                <Box position={[0,0,-2.5]}/>
                 <Orbit/>
             </Canvas>
-        </div>
+        </section>
     )
 }

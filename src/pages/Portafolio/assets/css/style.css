@@ -1,0 +1,33 @@
+
+/* Proyect modal component styles*/
+html,body{
+    margin:0px;
+    padding:0px;
+    background-color: #000;
+}
+
+.titulo{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin:0px;
+
+}
+
+.descripcion{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    margin:0px;
+}
+
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+
+    /* Le ponemos un max-width
+    para que no anada las barras extra de scroll*/
+    /* El border le anadira a las medidas que ya tiene 
+    asi que si le decimos que este al 100vw de la pantalla
+    y le agregamos un poco mas es obvio que anadira scroll*/
+}
+

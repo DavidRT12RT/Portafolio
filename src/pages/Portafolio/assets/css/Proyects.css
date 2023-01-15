@@ -1,0 +1,76 @@
+.proyectsContainer {
+    /*background-image: url("../assets/bg.gif");*/
+
+    color:white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.proyectsContainer .proyectsLeftBar .hidden{
+    visibility: hidden;
+}
+
+.proyectsContainer .proyectsLeftBar{
+    content: "";
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 100px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.proyectsLeftBar .titulo{
+    font-size: 100px;
+    -webkit-text-fill-color: transparent;
+    /*-webkit-text-stroke: 1px rgb(253, 56, 62);*/
+    -webkit-text-stroke: 1px rgb(253, 56, 62);
+} 
+
+@keyframes scrolling {
+    from{
+        transform:translateX(100%);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+.proyectsContainer .content{
+    width: 60%;
+    text-align: center;
+}
+
+.proyectsContainer .content .titulo{
+    font-size: 25px;
+}
+
+
+
+
+@media(min-width:100px) and (max-width:1000px){
+    .proyectsContainer{
+        width: 100%;
+    }
+}
+
+/* Proyect Card*/
+.proyectCardContainer{
+    width: 200px;
+    height: 250px;
+    border:1px solid rgb(253, 56, 62);
+}
