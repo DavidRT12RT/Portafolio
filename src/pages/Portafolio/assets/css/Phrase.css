@@ -1,0 +1,23 @@
+/* Phrase component style*/
+.phraseContainer{
+    position: relative;
+}
+
+.phraseContainer .information{
+    width: 80%;
+    height: 80%;
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color:rgb(253, 56, 62);
+    font-size: 60px;
+    text-align: center;
+}

@@ -9,6 +9,7 @@ import { Contact } from "./components/Contact";
 
 //Style
 import "./assets/css/Portafolio.css"; 
+import { Phrase } from "./components/Phrase";
 
 export const Portafolio = () => {
 
@@ -25,6 +26,7 @@ export const Portafolio = () => {
             <Navbar/>
             <Hero/>
             {/* <Knowledge/> */}
+            <Phrase/>
             <Contact/>
         </div>
     );

@@ -1,16 +1,5 @@
 import React from 'react'
-import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
-import {
-    OrbitControls
-} from "three/examples/jsm/controls/OrbitControls";
-extend({OrbitControls});
-
-const Orbit = () => {
-    const { camera,gl } = useThree();
-    return (
-        <orbitControls args={[camera,gl.domElement]}/>
-    );
-}
+import { Canvas } from "@react-three/fiber";
 
 const Box = (props) => {
 
@@ -23,7 +12,7 @@ const Box = (props) => {
 }
 
 
-export const ART3D = () => {
+export const RabbitHole = () => {
     return (
         <div className="contact">
             <Canvas
@@ -39,7 +28,6 @@ export const ART3D = () => {
                 <Box wireframe position={[0,0,-5]}/>
                 <Box wireframe position={[0,0,-6]}/>
                 <Box wireframe position={[0,0,-7]}/>
-                <Orbit/>
             </Canvas>
             <div className="information">
                 <h1 className="titulo">LET'S DISCUSS <br/> YOUR IDEAS</h1>

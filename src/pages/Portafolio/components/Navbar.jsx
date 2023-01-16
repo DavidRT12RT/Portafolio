@@ -7,7 +7,7 @@ import "../assets/css/Navbar.css";
 export const Navbar = () => {
     return (
         <nav className="navbarContainer">
-            <p className="titulo">David Arcos's portafolio</p>
+            <p className="sub-titulo">David Arcos's portafolio</p>
             <div className="menu">
                 <p className="descripcion">.whoIs()</p>
                 <p className="descripcion">.about()</p>

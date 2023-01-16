@@ -6,9 +6,9 @@
     /* tx,ty*/
     transform: translate(-50%, 0%);
 
-    width:100%;
-    height: 100px;
-    color:#000;
+    width:80%;
+    height: 80px;
+    color:#fff;
     padding: 40px;
 
     display: flex;
@@ -19,7 +19,7 @@
 }
 
 
-.navbarContainer .titulo{
+.navbarContainer .sub-titulo{
     font-size: 20px;
 }
 
@@ -49,6 +49,7 @@
 @media(min-width:100px) and (max-width:1000px){
     .navbarContainer{
         padding: 20px;
+        width: 100%;
     }
 
     .navbarContainer .menu{
