@@ -5,6 +5,7 @@ import { BootLoader } from "./components/BootLoader";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Knowledge } from "./components/Knowledge";
+import { Contact } from "./components/Contact";
 
 //Style
 import "./assets/css/Portafolio.css"; 
@@ -18,12 +19,13 @@ export const Portafolio = () => {
         setIsBootLoaderVisible(false);
     }
 
-    //if(isBootLoaderVisible) return <BootLoader onBootLoaderFinish={onBootLoaderFinish}/>
+    // if(isBootLoaderVisible) return <BootLoader onBootLoaderFinish={onBootLoaderFinish}/>
     return (
         <div className="mainContainer">
             <Navbar/>
             <Hero/>
-            <Knowledge/>
+            {/* <Knowledge/> */}
+            <Contact/>
         </div>
     );
 }

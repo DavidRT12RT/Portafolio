@@ -1,11 +1,9 @@
 import React from 'react'
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
-import { useRef } from "react";
 import {
     OrbitControls
 } from "three/examples/jsm/controls/OrbitControls";
 extend({OrbitControls});
-
 
 const Orbit = () => {
     const { camera,gl } = useThree();
@@ -15,15 +13,9 @@ const Orbit = () => {
 }
 
 const Box = (props) => {
-    const boxRef = useRef();
-
-    useFrame((state) => {
-        boxRef.current.rotation.x += 0.001;
-        boxRef.current.rotation.y += 0.001;
-    });
 
     return (
-        <mesh ref={boxRef} {...props}>
+        <mesh {...props}>
             <boxBufferGeometry/>
             <meshBasicMaterial wireframe color="rgb(253, 56, 62)"/>
         </mesh>
@@ -31,23 +23,29 @@ const Box = (props) => {
 }
 
 
-export const Art3D = () => {
+export const ART3D = () => {
     return (
-        <div className="art3DContainer">
+        <div className="contact">
             <Canvas
                 style={{
                     background:"inherint",
-                    border:"1px solid rgb(253, 56, 62)"
                 }}
                 camera={{position:[0,0,0]}}
             >
                 <Box wireframe position={[0,0,-1]}/>
+                <Box wireframe position={[0,0,-2]}/>
+                <Box wireframe position={[0,0,-3]}/>
+                <Box wireframe position={[0,0,-4]}/>
+                <Box wireframe position={[0,0,-5]}/>
+                <Box wireframe position={[0,0,-6]}/>
+                <Box wireframe position={[0,0,-7]}/>
                 <Orbit/>
             </Canvas>
             <div className="information">
-                <h1 className="sub-titulo">INOVACION</h1>
-                <p className="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sit dicta officia accusamus.</p>
+                <h1 className="titulo">LET'S DISCUSS <br/> YOUR IDEAS</h1>
+                <button type="primary" className="btn2">LET'S TALK</button>
             </div>
         </div>
     )
 }
+

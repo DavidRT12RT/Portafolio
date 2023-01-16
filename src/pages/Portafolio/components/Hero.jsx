@@ -37,6 +37,7 @@ export const Hero = () => {
             {/*Canvas*/}
             <Art3D/>
 
+
         </section>
     )
 }

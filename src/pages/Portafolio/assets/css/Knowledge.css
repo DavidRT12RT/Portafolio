@@ -1,5 +1,33 @@
 /* Knowledge component*/
 .knowledgeContainer{
+    background-color: #000;
+}
+
+.myServices{
+    display: grid;
+    grid-template-columns: minmax(200px,2fr) minmax(150px,2fr);
+    grid-template-rows: min-content;
+    align-items: center;
+    gap: 10px;
+
+    color:rgb(253, 56, 62);
+    padding: 40px;
+
+}
+
+.myServices .titulo{
+    grid-column: 1/-1;
+    font-size: 100px;
+}
+
+.myServices *{
+    grid-column: 1 / -1;
+}
+
+@media (min-width:100px) and (max-width:1000px){
+    .myServices .titulo{
+        font-size: 50px;
+    }
 
 }
 
@@ -31,5 +59,12 @@
     }
     to{
         transform:translateX(-100%);
+    }
+}
+
+
+@media (min-width:100px) and (max-width:1000px) {
+    .myServices{
+        padding:20px;
     }
 }
