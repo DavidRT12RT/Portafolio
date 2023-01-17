@@ -1,10 +1,17 @@
-import React from 'react'
-import { Canvas } from "@react-three/fiber";
+import React,{ useRef } from 'react'
+import { Canvas, useFrame } from "@react-three/fiber";
 
 const Box = (props) => {
 
+    const boxRef = useRef();
+
+    useFrame((state,delta) => {
+        boxRef.current.rotation.z += 0.0006;
+        boxRef.current.rotation.z += 0.0006;
+    });
+
     return (
-        <mesh {...props}>
+        <mesh ref={boxRef} {...props}>
             <boxBufferGeometry/>
             <meshBasicMaterial wireframe color="rgb(253, 56, 62)"/>
         </mesh>

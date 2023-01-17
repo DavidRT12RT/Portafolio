@@ -6,12 +6,20 @@ import "../assets/css/About.css";
 export const About = () => {
     return (
         <section className="aboutContainer">
+
+            <div className="japones">
+                <p className="titulo">規律</p>
+                <p className="titulo">忍耐</p>
+            </div>
+  
             <div className="content">
-
-                <p className="sub-titulo">ABOUT ME.</p>
-
+                <p className="sub-titulo">
+                    ABOUT ME.
+                </p>
                 <p className="descripcion">
-                    I'M DAVID ARCOS MELGAREJO,<br/>
+                    「I'M DAVID ARCOS MELGAREJO」
+                </p>
+                <p className="descripcion mt-3">
                     A FULL STACK DEVELOPER.DISCOVERING BEAUTY IN THE CODE<br/>
                     RETHINKING NEW FORMS TO SOLVE OLD PROBLEMS.<br/>
                 </p>
@@ -21,8 +29,10 @@ export const About = () => {
                     LIKE NEW TECNOLOGIES OR WAYS TO DO A BETTER WORK LIKE 
                     SOLID PRINCIPLES,ALGORITMHS,ETC.
                 </p>
+
                 <button type="primary" className="btn2 descripcion mt-3">View proyect's</button>
             </div>
+
        </section>
     )
 }

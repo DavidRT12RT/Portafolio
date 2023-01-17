@@ -1,7 +1,9 @@
 /* Estilos globales de el portafolio*/
-body,html{
+body,html,*{
     margin:0px;
     padding:0px;
+    outline: none;
+    border:0px;
     box-sizing: border-box;
     /* 
     The box-sizing CSS property sets how the total width 
@@ -45,6 +47,7 @@ body,html{
 .mainContainer section{
     height: 100%;
     width: 100%;
+    margin:0px;
 }
 
 
@@ -66,6 +69,11 @@ body,html{
     color:rgb(253, 56, 62);
     background:none;
     padding: 10px;
+}
+
+.btn2:hover{
+    background-color:#b4009e;
+    /* color:#000; */
 }
 
 .color{
