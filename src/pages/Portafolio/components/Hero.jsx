@@ -26,10 +26,11 @@ const Gradient = () => {
             },
             u_mouse: { value: new Vector2(0, 0) },
             u_bg: {
-                value: new Color("#A1A3F7"),
+                // value: new Color("#FFF"),
+                value:new Color("#000"),
             },
-            u_colorA: { value: new Color("#9FBAF9") },
-            u_colorB: { value: new Color("#FEB3D9") },
+            u_colorA: { value: new Color("#FD383E") },
+            u_colorB: { value: new Color("#FD383E") },
         }),
         []
     );
@@ -47,8 +48,9 @@ const Gradient = () => {
 
         mesh.current.material.uniforms.u_time.value = clock.getElapsedTime();
         mesh.current.material.uniforms.u_mouse.value = new Vector2(
-            mousePosition.current.x,
-            mousePosition.current.y
+            // mousePosition.current.x / 100,
+            // mousePosition.current.y / 100
+            1,1
         );
     });
 
@@ -70,18 +72,14 @@ export const Hero = () => {
         <section className="heroContainer">
             <Canvas camera={{ position: [0.0, 0.0, .2] }}>
                 <EffectComposer multisampling={0} disableNormalPass={true}>
-                    <Noise opacity={0.25} />
+                    <Noise opacity={0.15} />
                     <Gradient />
                 </EffectComposer>
             </Canvas>
             <div className="information">
                 <p className="titulo color">DIGITALIZE YOUR IDEA'S</p>
                 <p className="descripcion color">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Obcaecati ipsa vero ipsum id dignissimos? Repudiandae at
-                    ipsam dicta officiis provident temporibus dolor hic ab
-                    distinctio. Architecto, perspiciatis. Dolore, impedit!
-                    Repellat.
+                    Transform your idea into the most innovative bussiness in the markent today.
                 </p>
             </div>
         </section>

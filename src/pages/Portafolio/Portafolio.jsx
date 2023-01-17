@@ -4,12 +4,13 @@ import { useState } from "react";
 import { BootLoader } from "./components/BootLoader";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { Knowledge } from "./components/Knowledge";
 import { Contact } from "./components/Contact";
+import { Phrase } from "./components/Phrase";
+import { About } from "./components/About";
 
 //Style
 import "./assets/css/Portafolio.css"; 
-import { Phrase } from "./components/Phrase";
+
 
 export const Portafolio = () => {
 
@@ -25,6 +26,7 @@ export const Portafolio = () => {
         <div className="mainContainer">
             <Navbar/>
             <Hero/>
+            <About/>
             {/* <Knowledge/> */}
             <Phrase/>
             <Contact/>

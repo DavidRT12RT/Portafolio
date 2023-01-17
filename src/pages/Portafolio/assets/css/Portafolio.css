@@ -14,18 +14,21 @@ body,html{
     font-weight: 900;
     margin:0px;
     font-size: 80px;
+    color:rgb(253, 56, 62);
 }
 
 .sub-titulo{
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     margin:0px;
+    color:rgb(253, 56, 62);
 }
 
 .descripcion{
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     margin:0px;
+    color:rgb(253, 56, 62);
 }
 
 .mainContainer{
@@ -58,10 +61,11 @@ body,html{
 .btn2{
     border:1px solid rgb(253, 56, 62);
     cursor:pointer;
-    width: 200px;
-    font-size:16px;
+    /* width: 100%; */
+    font-size:20px;
     color:rgb(253, 56, 62);
     background:none;
+    padding: 10px;
 }
 
 .color{
@@ -78,6 +82,12 @@ body,html{
 @media (min-width:800px){
     .titulo{
         font-size: 70px;
+    }
+}
+
+@media (min-width:1000px){
+    .titulo{
+        font-size:100px;
     }
 }
 

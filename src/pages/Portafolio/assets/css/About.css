@@ -1,0 +1,28 @@
+/* About component styles */
+.aboutContainer{
+    display: grid;
+    align-content: center;
+    /* background-color: #fff; */
+    background-color: #000;
+}
+
+
+.aboutContainer .content{
+    text-align: center;
+}
+
+.aboutContainer .content .descripcion{
+    font-size: 21px;
+}
+
+.aboutContainer .content .sub-titulo{
+    font-size: 120px;
+}
+
+@media (min-width:400px) and (max-width:1000px){
+
+    .aboutContainer .content .titulo{
+        font-size: 70px;
+    }
+}
+
