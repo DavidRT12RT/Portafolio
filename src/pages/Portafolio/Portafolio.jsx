@@ -9,6 +9,10 @@ import { Phrase } from "./components/Phrase";
 import { Proyects } from "./components/Proyects";
 import { Contact } from "./components/Contact";
 
+
+//Experiment's
+import { Experience } from "./components/Experience";
+
 //Style
 import "./assets/css/Portafolio.css"; 
 
@@ -27,10 +31,10 @@ export const Portafolio = () => {
         <div className="mainContainer">
             <Navbar/>
             <Hero/>
+            <Experience/>
+            <Phrase/>
             <About/>
             {/* <Knowledge/> */}
-            <Phrase/>
-            <Proyects/>
             <Contact/>
         </div>
     );

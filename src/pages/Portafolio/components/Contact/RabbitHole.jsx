@@ -11,7 +11,7 @@ const Box = (props) => {
 
     return (
         <mesh {...props}>
-            <boxBufferGeometry/>
+            <boxGeometry/>
             <meshBasicMaterial wireframe color="rgb(253, 56, 62)"/>
         </mesh>
     );

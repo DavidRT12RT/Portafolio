@@ -36,7 +36,7 @@ export const Proyects = () => {
                 <p className="sub-titulo">PROYECT'S.</p>
 
                 <div className="cardsContainer">
-                    <img src={require("../assets/imgs/proyects/SANZAPP/1.png")}/>
+                    {/* <img src={require("../assets/imgs/proyects/SANZAPP/1.png")}/> */}
 
                     <div className="infoProyect">
                         <p className="descripcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci ratione hic fuga, assumenda debitis ea expedita a molestiae nihil, ut esse quibusdam mollitia corrupti quae veniam iste magni porro aspernatur.</p>
