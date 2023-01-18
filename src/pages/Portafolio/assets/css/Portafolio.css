@@ -24,6 +24,15 @@ body,html,*{
     font-weight: 700;
     margin:0px;
     color:rgb(253, 56, 62);
+    font-size: 120px;
+}
+
+.sub-titulo2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    margin:0px;
+    color:rgb(253, 56, 62);
+    font-size: 70px;
 }
 
 .descripcion{
@@ -31,6 +40,7 @@ body,html,*{
     font-weight: 400;
     margin:0px;
     color:rgb(253, 56, 62);
+    font-size: 21px;
 }
 
 .mainContainer{
@@ -71,6 +81,16 @@ body,html,*{
     padding: 10px;
 }
 
+.sub-titulo-decoration-line-uderline{
+    text-decoration: underline;
+
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin:0px;
+    color:rgb(253, 56, 62);
+    font-size: 120px;
+}
+
 .btn2:hover{
     background-color:#b4009e;
     /* color:#000; */
@@ -81,22 +101,11 @@ body,html,*{
 }
 
 
-@media (min-width:360px){
+@media (min-width:360px) and (max-width:1000px){
     .titulo{
         font-size: 40px;
     }
-}
-
-@media (min-width:800px){
-    .titulo{
-        font-size: 70px;
+    .sub-titulo{
+        font-size: 60px;
     }
 }
-
-@media (min-width:1000px){
-    .titulo{
-        font-size:100px;
-    }
-}
-
-

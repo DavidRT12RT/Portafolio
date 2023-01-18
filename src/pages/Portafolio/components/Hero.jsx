@@ -79,7 +79,7 @@ export const Hero = () => {
             <div className="information">
                 <p className="titulo color">DIGITALIZE YOUR IDEA'S</p>
                 <p className="descripcion color">
-                    Transform your idea into the most innovative bussiness in the markent today.
+                    TRANSFORM YOUR IDEA INTO THE MOST INNOVATIVE BUSSINESS IN THE MARKET TODAY.
                 </p>
             </div>
         </section>
