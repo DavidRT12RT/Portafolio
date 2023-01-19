@@ -4,14 +4,11 @@ import { useState } from "react";
 import { BootLoader } from "./components/BootLoader";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { Phrase } from "./components/Phrase";
-import { Proyects } from "./components/Proyects";
-import { Contact } from "./components/Contact";
-
-
-//Experiment's
 import { Experience } from "./components/Experience";
+import { Phrase } from "./components/Phrase";
+import { About } from "./components/About";
+import { Skills } from "./components/Skills";
+import { Contact } from "./components/Contact";
 
 //Style
 import "./assets/css/Portafolio.css"; 
@@ -34,6 +31,7 @@ export const Portafolio = () => {
             <Experience/>
             <Phrase/>
             <About/>
+            <Skills/>
             {/* <Knowledge/> */}
             <Contact/>
         </div>

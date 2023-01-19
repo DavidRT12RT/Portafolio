@@ -1,7 +1,7 @@
 import React, { Suspense, useRef } from 'react'
 
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
-import { Html, OrbitControls, Scroll, ScrollControls } from '@react-three/drei';
+import { Html,Scroll, ScrollControls } from '@react-three/drei';
 
 import * as THREE from "three";
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
@@ -38,7 +38,7 @@ const Mesh = ({proyect,index}) => {
             >
                 <planeGeometry args={[5,4,3]}/>
                 <meshStandardMaterial map={cover}/>
-                <Html occlude={true}>
+                <Html occlude>
                     <p className="descripcion">{proyect.description}</p>
                 </Html>
 
@@ -47,7 +47,46 @@ const Mesh = ({proyect,index}) => {
     );
 }
 
+const JapanaseText = () => {
+
+    return (                
+        <Html 
+                wrapperClass="japones" 
+                center
+                occlude
+                zIndexRange={[100,0]}
+            >
+                <p className="titulo">経験</p>
+                <p className="titulo">プログラミング</p>
+                <p className="titulo">革新</p>
+                <p className="titulo">革新</p>
+
+                <p className="titulo">経験</p>
+                <p className="titulo">プログラミング</p>
+                <p className="titulo">革新</p>
+                <p className="titulo">革新</p>
+
+                <p className="titulo">経験</p>
+                <p className="titulo">プログラミング</p>
+                <p className="titulo">革新</p>
+                <p className="titulo">革新</p>
+        </Html>
+    )
+
+}
+
+const Lights = () => {
+    return (
+        <>
+            <pointLight color="white" intensity={0.3} position={[0, 0, 0]} />
+            <ambientLight intensity={0.35}/>
+        </>
+    );
+}
+
 export const Experience = () => {
+
+    const proyectsRef = useRef();
 
 
     const proyects = [
@@ -72,32 +111,28 @@ export const Experience = () => {
     return (
         <section className="experienceContainer">
             <Canvas id="canvas">
-                <ambientLight intensity={0.35}/>
-                <Html occlude={false} transform fullscreen>
+
+                <Lights/>
+                <JapanaseText/>
+
+                <Html center>
                     <p className="sub-titulo">PROYECT'S</p>
                 </Html>
-                <Html 
-                    wrapperClass="japones" 
-                    position={[0,0,0]} 
-                    occlude 
-                >
-                    <p className="titulo">経験</p>
-                    <p className="titulo">プログラミング</p>
-                    <p className="titulo">革新</p>
-                    <p className="titulo">革新</p>
-                </Html>
+
                 <Suspense>
                     <ScrollControls 
                         style={{scrollbarWidth:"none"}}
                         pages={proyects.length + 1.5}
                     >
                         <Scroll>
-                            {
-                                proyects.map((proyect,i) => (
-                                    <Mesh proyect={proyect} index={i} key={i}/>
-                                ))
-                            }
-                        </Scroll>
+                            <group ref={proyectsRef}>
+                                {
+                                    proyects.map((proyect,i) => (
+                                        <Mesh proyect={proyect} index={i} key={i}/>
+                                    ))
+                                }
+                            </group>
+                       </Scroll>
                     </ScrollControls>
                 </Suspense>
             </Canvas>

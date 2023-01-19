@@ -1,16 +1,5 @@
 .experienceContainer{
     background-color: #000;
-}
-
-.experienceContainer .sub-titulo{
-    font-size: 80px;
-}
-
-
-@media (min-width:100px) and (max-width:1000px) {
-
-    .experienceContainer .sub-titulo{
-        font-size: 40px;
-    }
-    
+    /* background-color: #fff; */
+    height: 150vh !important;
 }

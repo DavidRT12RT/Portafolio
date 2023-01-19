@@ -1,0 +1,87 @@
+/* Skills component styles */
+
+.skillsContainer{
+    background-color: #000;
+
+    display: grid;
+    align-content: center;
+
+    text-align: center;
+    position: relative;
+}
+
+.skillsContainer .content{
+    height: 100%;
+    width: 90%;
+
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    display: grid;
+    align-content: center;
+}
+
+
+.skillsContainer .marquee{
+    width: 100%; 
+    height: 30%;
+    position:absolute;
+    bottom: 20px;
+    left:0px;
+
+    overflow: hidden;    
+    display: flex;
+    align-items: center;
+
+}
+
+.marquee .sub-titulo{
+    font-size: 12em;
+    white-space: nowrap;
+}
+
+
+
+
+.tecnologiesContainer{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    overflow: hidden;
+}
+
+.skillContainer{
+    width: 500px;
+    height: 700px;
+
+    border:1px solid rgb(253, 56, 62);
+    padding:10px;
+
+    position:relative;
+
+
+}
+
+.skillContainer .sub-titulo2{
+    position: absolute;
+    font-size: 20px;
+
+    top: 0px;
+    right: -20%;
+
+    text-transform: uppercase;
+}
+
+@media (min-width:360px) and (max-width:1000px){
+    .skillsContainer .japones .titulo{
+        font-size: 100px;
+    }
+}
+
